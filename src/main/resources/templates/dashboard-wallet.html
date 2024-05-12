@@ -206,28 +206,28 @@
 				<div class="row">
 
 					<!-- Invoices -->
-					<div class="col-lg-6 col-md-12">
-						<div class="dashboard-list-box invoices with-icons margin-top-20">
-							<h4>Payment with momo</h4>
-							<ul>
-								<th:block th:each="y : ${listRecentMomo}">
-									<li><i class="list-box-icon sl sl-icon-basket"></i> <strong
-										th:text="${y.user.user_Name}"></strong>
-										<ul>
-											<li class="paid"
-												th:text="${#numbers.formatDecimal(y.total, 0, 'COMMA', 0, 'POINT')} + ' VNĐ'"></li>
-											<li th:text="'Order: #'+${y.id}"></li>
-											<li
-												th:text="'Date: ' + ${#dates.format(y.booking_Date, 'dd/MM/yyyy')}"></li>
-										</ul>
-										<div class="buttons-to-right">
-											<a th:href="@{/dashboard-invoice/{id}(id=${y.id})}"
-												class="button gray">View Invoice</a>
-										</div></li>
-								</th:block>
-							</ul>
-						</div>
-					</div>
+<!--					<div class="col-lg-6 col-md-12">-->
+<!--						<div class="dashboard-list-box invoices with-icons margin-top-20">-->
+<!--							<h4>Payment with momo</h4>-->
+<!--							<ul>-->
+<!--								<th:block th:each="y : ${listRecentMomo}">-->
+<!--									<li><i class="list-box-icon sl sl-icon-basket"></i> <strong-->
+<!--										th:text="${y.user.user_Name}"></strong>-->
+<!--										<ul>-->
+<!--											<li class="paid"-->
+<!--												th:text="${#numbers.formatDecimal(y.total, 0, 'COMMA', 0, 'POINT')} + ' VNĐ'"></li>-->
+<!--											<li th:text="'Order: #'+${y.id}"></li>-->
+<!--											<li-->
+<!--												th:text="'Date: ' + ${#dates.format(y.booking_Date, 'dd/MM/yyyy')}"></li>-->
+<!--										</ul>-->
+<!--										<div class="buttons-to-right">-->
+<!--											<a th:href="@{/dashboard-invoice/{id}(id=${y.id})}"-->
+<!--												class="button gray">View Invoice</a>-->
+<!--										</div></li>-->
+<!--								</th:block>-->
+<!--							</ul>-->
+<!--						</div>-->
+<!--					</div>-->
 
 					<!-- Invoices -->
 					<div class="col-lg-6 col-md-12">
