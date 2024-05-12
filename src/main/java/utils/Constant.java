@@ -2,7 +2,7 @@ package utils;
 
 public class Constant {
 	
-	public static final  String accessKey = "M8brj9K6E22vXoDB";	
+	public static final String accessKey = "M8brj9K6E22vXoDB";
 	public static final String serectkey = "nqQiVSgDMy809JoPF6OzP5OdBUB550Y4";
 	public static final String orderType = "momo_wallet";
 	public static final String requestType="captureWallet";
