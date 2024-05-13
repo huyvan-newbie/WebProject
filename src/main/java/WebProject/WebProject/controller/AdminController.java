@@ -258,6 +258,25 @@ public class AdminController {
 			return "dashboard-my-products-edit";
 		}
 	}
+	@GetMapping("/dashboard-myproducts/delete/{id}")
+	public String DeleteProduct(@PathVariable int id, Model model, HttpServletRequest request) throws Exception {
+		User admin = (User) session.getAttribute("admin");
+		System.out.println("------>");
+		System.out.println(id);
+		if (admin == null) {
+			return "redirect:/signin-admin";
+		} else {
+			String referer = request.getHeader("Referer");
+			Product product = productService.getProductById(id);
+			System.out.println("-----> product");
+			System.out.println(product);
+			if (product != null) {
+				System.out.println("-----> check");
+				productService.deleteProductById(id);
+			}
+			return "redirect:" + referer;
+		}
+	}
 
 	@PostMapping("/dashboard-myproducts/edit")
 	public String DashboardMyProductEditHandel(Model model, @ModelAttribute("product_id") int product_id,
